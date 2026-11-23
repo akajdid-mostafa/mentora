@@ -1,0 +1,60 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# next.js / production
+/.next/
+/out/
+/build
+
+# packaging output: the staged copy and the zip `package.sh` writes. Committed
+# once by a stray `git add -A`, the next prep rsyncs a file it has just deleted
+# and dies without saying why.
+/dist
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+*.tsbuildinfo
+
+# Dev scaffolding: the picks the bench and the switch write on every click.
+# Both come off before the template ships, and neither is ever worth a commit.
+.lab-picks.json
+.switch-picks.json
+
+# Fontshare faces, under the ITF Free Font License: free to use, not free to
+# hand on. Keeping the files out of git is what guarantees they can never
+# travel in a sale zip — `npm run fonts` fetches them from fontshare.com, and
+# public/fonts/README.md is the buyer's copy of the same instruction.
+/public/fonts/*.woff2
+/public/fonts/FFL.txt
+
+# The audit skill's pictures and reports: one run deep, rewritten by the next,
+# and evidence for the agent that fixes rather than any part of the product.
+/.audit/

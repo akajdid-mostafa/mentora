@@ -1,0 +1,26 @@
+/* The heading face, Cabinet Grotesk, from fontshare.com, and the one file in
+   this project whose asset is not in the repo.
+
+   Indian Type Foundry's Free Font License grants unlimited free commercial use
+   and forbids passing the files on — section 02 rules out distributing them
+   through "a marketplace … or platform" and says a third party "must obtain
+   their own copy directly from Fontshare". A template zip with the .woff2 in
+   it is that distribution, so the file is gitignored, `npm run fonts` fetches
+   it, and public/fonts/README.md is the instruction the buyer gets.
+
+   Which is why this is @font-face and not next/font/local. The loader in
+   layout.tsx resolves its `src` at build time and throws when the file is
+   missing. A url() that 404s is not an error at all: the browser drops the
+   face and takes the next one in the stack, Bricolage Grotesque, which
+   layout.tsx loads through next/font and which ships with the template.
+
+   One variable file spanning the family's true axis range, so the emphasis
+   step is a real instance rather than a browser-synthesised bold. */
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

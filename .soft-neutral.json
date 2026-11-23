@@ -1,0 +1,7 @@
+{
+  "waive": {
+    "responsive-check: mono over words somebody chose": "House rules § 8 — small caps are mono, through Caps",
+    "responsive-check: a nested radius that is not concentric": "Corners approved at 1.0.0, before the rule; a card inset in a pastel panel keeps its own radius",
+    "controls-check: a card that goes somewhere is not one target": "Approved at 1.0.0, before the rule: a play disc, a lesson pill or a course chip over a photograph is its own link, and the frame around it is a picture, not a card"
+  }
+}
