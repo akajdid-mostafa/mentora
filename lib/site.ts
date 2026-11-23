@@ -1,18 +1,14 @@
 // Who the site is, and where it lives. Two values every crawler-facing field
-// resolves against, and the two a fork changes first.
+// resolves against.
 //
-// `siteUrl` is `.example.com` on purpose rather than a plausible-looking
-// domain: `example.com` is reserved by the IANA and can never be registered,
-// so a template shipping with this in it cannot be pointing a canonical or a
-// sitemap at somebody else's live site — which is what a placeholder that
-// looks real does the day the buyer forgets to change it.
-//
-// Read from NEXT_PUBLIC_SITE_URL when one is set, so a deploy names its own
-// address without an edit here; with none set, the placeholder stands. The
-// template ships no .env file, and a buyer replacing the mock data finds the
-// fallback beside it.
+// The fallback is this repository's GitHub Pages address: an address the
+// project actually owns, so the sitemap, canonicals and JSON-LD never point at
+// a reserved example domain. A real deploy names its own host with
+// NEXT_PUBLIC_SITE_URL in the environment and leaves this file alone. Set it
+// before launch: search engines read these fields long before a visitor sees
+// the page.
 export const siteName = "Mentora";
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.example.com";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akajdid-mostafa.github.io/mentora";
 
 /** An absolute URL from a site path.
  *
